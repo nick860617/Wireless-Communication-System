@@ -1,8 +1,8 @@
-%% Initialization
+%% Initialization 
 clear all;
 close all;
 clc;
-%%  HW1-1
+%%  HW1-1 
 Channel_number = [1:20 200:220];
 Blocking_rate = [0.01 0.03 0.05 0.1];
 rho_table = zeros(length(Channel_number), length(Blocking_rate));
@@ -13,7 +13,7 @@ for i=1:length(Channel_number)
     end
 end
 
-%% HW1-2-1
+%% HW1-2-1 
 
 Channel_number_ = [1 3 5 15];
 Blocking_rate_ = [0:0.05:0.65];
@@ -38,7 +38,7 @@ legend('m: 1 ', 'm: 3 ', 'm: 5 ', 'm: 20 ');
 xlabel('rho / Channel') 
 ylabel('Blocking rate(B)') 
 grid on
-%% HW1-2-2
+%% HW1-2-2 
 for i=1:length(Channel_number_)
     plot(Blocking_rate_, rho_table_(i, 1:end).*(1-Blocking_rate_), '-*'); 
     if i == 1
@@ -51,7 +51,7 @@ xlabel('Blocking rate(B)')
 ylabel('Modified rho') 
 grid on
 
-%% HW1-3
+%% HW1-3 
 operator = [1 2 3];
 Blocking_rate = [0.01 0.03 0.05 0.1];
 rho_table = zeros(length(operator), length(Blocking_rate));
@@ -63,7 +63,7 @@ for i=1:length(operator)
     end
 end
 
-%% HW1-4
+%% HW1-4 
 
 opers = [1 2 4 8 16 32 64 128];
 rate = [0.01 0.03 0.05 0.1];
